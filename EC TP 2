@@ -36,3 +36,79 @@
 	(gosta ?x realidades-alternativas)
 =>
 	(assert (recomendo ?x "O Homem no Castelo Alto")))
+
+
+(deftemplate pessoa
+	(slot cor-do-cabelo)
+	(multislot nome)
+	(slot cor-dos-olhos)
+	(slot idade)
+	(slot abstrai-idade) )
+
+(deffacts pessoas
+	(pessoa (cor-do-cabelo preto)
+ 		(cor-dos-olhos azul)
+		(nome Joao Marsupilami Silva)
+		(idade 23))
+	(pessoa (cor-do-cabelo vermelho)
+ 		(nome Gonçalo Bip-Bip Coiote)
+ 		(cor-dos-olhos azul)
+ 		(idade 38))
+	(pessoa (cor-do-cabelo ruivo)
+ 		(nome António Português Suave)
+ 		(cor-dos-olhos castanho)
+ 		(idade 20))
+	(pessoa (cor-do-cabelo louro)
+ 		(nome Ronaldo Bola Baliza Chuta)
+ 		(cor-dos-olhos verde)
+ 		(idade 88))
+	(pessoa (cor-do-cabelo castanho)
+ 		(nome Francisco O Chico)
+ 		(cor-dos-olhos preto)
+ 		(idade 2)))
+;; a) Listar as pessoas e as respectivas idades
+
+
+
+(defrule mostra-idades
+	(pessoa (nome $? ?apelido)
+	(idade ?id))
+=>
+	(printout t ?apelido " tem " ?id " anos." crlf))
+
+
+;; b) Listar as pessoas com cabelo escuro
+
+(defrule mostra-cabelo-escuro
+	(pessoa (nome $? ?apelido)
+	(cor-do-cabelo castanho | preto))
+=>
+	(printout t ?apelido " tem cabelo escuro." crlf))
+
+
+;; c) Listar as pessoas com olhos verdes ou azuis
+
+(defrule mostra-olhos-verdes-azuis
+	(pessoa (nome $? ?apelido)
+	(cor-dos-olhos ?cor&azul | verde))
+=>
+	(printout t ?apelido " tem olhos de cor " ?cor crlf))
+
+;; e) Indique que nao ha duas pessoas com a mesma idade
+
+(defrule sem-idades-iguais
+	(not (and
+		(pessoa (nome $?nome) (idade ?idade))
+		(pessoa (idade ?idade) (nome $?nome2&:(neq $?nome $?nome2)))))
+=>
+	(printout t "Nao ha duas pessoas com a mesma idade!" crlf))
+
+;; f)Construa uma regra para saber se existe pelo menos uma pessoa de olhos azuis
+
+
+(defrule pelo-menos-azul
+	(exists (pessoa (cor-dos-olhos ?cor&azul)))
+=>
+	(printout t "Existe uma pessoa de olhos com olhos azuis." crlf))
+
+;; g)Regras classificaçao de idades.
