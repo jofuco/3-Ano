@@ -1,0 +1,38 @@
+(deffacts livros
+	(vive max washingtonDC)
+	(vive jane sãoFrancisco)
+	(gosta max philipKDick)
+	(gosta jane philipKDick)
+	(gosta pat "Os Três Estigmas de Palmer Eldrich"))
+
+(defrule c1 "r1" 
+	(gosta ?x philipKDick)
+=>
+	(assert (gosta ?x ficção-cientifica)))
+
+(defrule c2 "r2"
+	(gosta ?x ubik)
+=>
+	(assert (gosta ?x realidades-alternativas)))
+
+(defrule c3 "r3"
+	(vive ?x sãoFrancisco)
+	(gosta ?x ficção-cientifica)
+=>
+	(assert (gosta ?x realidades-alternativas)))
+
+(defrule c4 "r4"
+	(vive ?x washingtonDC)
+=>
+	(assert (gosta ?x politica)))
+
+(defrule c5 "r5" 
+	(gosta ?x politica)
+	(gosta ?x ficção-cientifica)
+=>
+	(assert (recomendo ?x "A penúltima verdade")))
+
+(defrule c6 "r6"
+	(gosta ?x realidades-alternativas)
+=>
+	(assert (recomendo ?x "O Homem no Castelo Alto")))
