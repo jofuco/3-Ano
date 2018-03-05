@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>A Cidade de Lisboa</title>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-metro.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+$(document).ready(function(){
+    $('#tb').hide();
+    $('#pv').hide();
+    $('#tp').hide();
+
+    $("#img1").on("click", function(){
+        $("#tb").show();
+    });
+    $("#img2").click(function(){
+        $("#pv").show();
+    });
+        
+    $("#img3").click(function(){
+        $("#tp").show();
+    });    
+    
+    $("#tb").on("click", function(){
+        $(this).hide();
+    });
+    
+    $("#pv").on("click", function(){
+        $(this).hide();
+    });
+    
+    $("#tp").on("click", function(){
+        $(this).hide();
+    });
+    
+        
+    
+});
+</script>
+<style>
+.body {
+    background-color: "w3-pale-green">;
+}
+
+.circle:before{
+  content: "\25CF";
+  font-size: 20px;
+  display: inline-block;
+}
+
+
+} 
+</style>
+</head>
+<body>
+
+<div class="w3-bar w3-black">
+<button class="w3-button w3-hover-green">Home</button>
+    <button class="w3-button w3-hover-green">Museus</button>
+    <button class="w3-button w3-hover-green">Monumentos</button>
+    <button class="w3-button w3-hover-green">Restaurantes</button>
+</div>
+
+<div class ="w3-container w3-green w3-margin-top w3-text-white">
+<h1>A Cidade de Lisboa</h1>    
+</div>
+
+<div class="w3-container w3-pale-green w3-cell w3-small">
+    <h2><b>Introdução</b></h2>
+  
+   <p>
+    
+Lisboa GCTE é a capital de Portugal e a cidade mais populosa do país. Tem uma população de 506 892 habitantes, dentro dos seus limites administrativos. Na Área Metropolitana de Lisboa, residem 2 821 697 pessoas (2011), sendo por isso a maior e mais populosa área metropolitana do país. Lisboa é o centro político de Portugal, sede do Governo e da residência do chefe de Estado. É o "farol da lusofonia" (Daus): a Comunidade dos Países de Língua Portuguesa (CPLP) tem a sua sede na cidade. É ainda a capital mais a ocidente do continente europeu na costa atlântica.
+</p>
+        
+</div>
+    
+<div class="w3-container w3-pale-green w3-cell w3-small">
+    <h2><b>Globalidade</b></h2>
+   <p>
+Lisboa é considerada como cidade global devido à sua importância em aspectos financeiros, comerciais, mediáticos, artísticos, educacionais e turísticos. É um dos principais centros económicos do continente europeu, graças a um progresso financeiro crescente favorecido pelo maior porto de contentores da costa atlântica da Europa e mais recentemente pelo Aeroporto Humberto Delgado, que recebe mais de 20 milhões de passageiros anualmente (2015). Lisboa conta com uma rede de auto-estradas e um sistema de ferrovias de alta velocidade (Alfa Pendular), que liga as principais cidades portuguesas à capital. 
+          
+A cidade é a sétima mais visitada do sul da Europa, depois de Istambul, Roma, Barcelona, Madrid, Atenas e Milão, com 1 740 000 de turistas em 2009, tendo em 2014 ultrapassado a marca dos 3,35 milhões. A nível global, Lisboa foi a 35.ª cidade com maior destino turístico em 2015, cerca de 4 milhões de visitantes. Em 2015, foi considerada a 11.ª cidade turística mais popular, à frente de Madrid, Rio de Janeiro, Berlim e Barcelona.
+</p>
+</div>
+
+<div class="w3-container w3-pale-green w3-cell w3-small">
+    <h2><b>Riqueza</b></h2>
+    <p>
+A região de Lisboa é a mais rica do país, com um PIB PPC per capita de 26 100 euros (4,7% maior do que o PIB per capita médio da União Europeia). A sua área metropolitana é a vigésima mais rica do continente, com um PIB-PPC no valor de 58 mil milhões de euros, o que equivale a cerca de 35% do PIB-PPC total do país. Lisboa ocupa o 122.º lugar entre as cidades com maiores receitas brutas do mundo.
+
+A maioria das sedes das multinacionais instaladas em Portugal encontram-se na região de Lisboa, a nona cidade do mundo com maior número de conferências internacionais.
+</p>
+</div>
+    
+<div class="w3-row w3-light-blue">
+    <div class="w3-container w3-third">
+    <img id=img1 src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Torre_de_Bel%C3%A9m_-_Lisboa_Portugal.jpg/800px-Torre_de_Bel%C3%A9m_-_Lisboa_Portugal.jpg" alt="Torre de Belém" class="w3-round-xlarge w3-image w3-hover-border-red" style="width:100%">
+        
+    </div>
+    
+    
+    <div class="w3-container w3-round-xlarge w3-third">
+    <img id=img2 src="http://municipiosefreguesias.pt/files/20141111021430_vascodagama.jpg" alt="Ponte Vasco da Gama" class="w3-round-xlarge w3-image w3-hover-border-white" style="width:100%">
+    </div>
+    
+    <div class="w3-container w3-third">
+    <img id=img3 src="http://turismo.culturamix.com/blog/wp-content/gallery/praca-do-comercio/praca-do-comercio-11.jpg" alt="Terreiro do Paço" class="w3-round-xlarge w3-image w3-hover-border-white" style="width:100%">
+    </div>
+    
+</div> 
+    
+
+
+<div class="w3-row w3-small w3-metro-dark-green">
+ <div class="w3-container w3-quarter">
+    <p><b>(C) Docentes de PSI.</b></p>
+    </div>
+     
+<div class="w3-container w3-quarter">     
+     <p id=tb>  Esta fotografia representa a Torre de Belém.</p>
+    </div>
+<div class="w3-container w3-quarter">   
+    <p id=pv>  Esta fotografia representa a Ponte Vasco da Gama.</p>
+    </div>
+
+<div class="w3-container w3-quarter">   
+    <p id=tp>  Esta fotografia representa o Terreiro do Paço</p> 
+    </div>
+
+
+    
+</div>
+
+    
+</body>
+</html>
+
