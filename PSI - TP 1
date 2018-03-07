@@ -42,15 +42,36 @@ $(document).ready(function(){
 .body {
     background-color: "w3-pale-green">;
 }
-
-.circle:before{
-  content: "\25CF";
-  font-size: 20px;
-  display: inline-block;
+.circle {
+    width:13px;
+    height:13px;
+    border-radius:50px;
+    font-size:20px;
+    line-height:100px;
+    animation: pulse 2s infinite;
 }
 
+@keyframes pulse {
+  0% {
+    background-color: red;
+  }
+  100% {
+    background-color: green;
+  }
+}
 
+.col-sm-2 > span, .col-sm-2 > p {
+  display: inline-block;
+}
+    
+img { 
+  border: 0px solid black; 
 } 
+img:hover { 
+  outline: 3px solid black; 
+} 
+
+
 </style>
 </head>
 <body>
@@ -102,8 +123,13 @@ A maioria das sedes das multinacionais instaladas em Portugal encontram-se na re
     
     
     <div class="w3-container w3-round-xlarge w3-third">
-    <img id=img2 src="http://municipiosefreguesias.pt/files/20141111021430_vascodagama.jpg" alt="Ponte Vasco da Gama" class="w3-round-xlarge w3-image w3-hover-border-white" style="width:100%">
+      
+           
+    <img id=img2 src="http://municipiosefreguesias.pt/files/20141111021430_vascodagama.jpg" alt="Ponte Vasco da Gama" class="w3-round-xlarge w3-image " style="width:100%" >
+            
+           
     </div>
+        
     
     <div class="w3-container w3-third">
     <img id=img3 src="http://turismo.culturamix.com/blog/wp-content/gallery/praca-do-comercio/praca-do-comercio-11.jpg" alt="Terreiro do Paço" class="w3-round-xlarge w3-image w3-hover-border-white" style="width:100%">
@@ -114,8 +140,9 @@ A maioria das sedes das multinacionais instaladas em Portugal encontram-se na re
 
 
 <div class="w3-row w3-small w3-metro-dark-green">
- <div class="w3-container w3-quarter">
-    <p><b>(C) Docentes de PSI.</b></p>
+ <div class="w3-container w3-quarter ">
+      <div class="col-sm-2"> <span><div class="circle"></div></span>
+          <p><b>(C) Docentes de PSI.</b></p>
     </div>
      
 <div class="w3-container w3-quarter">     
