@@ -71,17 +71,47 @@ img:hover {
   outline: 3px solid black; 
 } 
 
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+ul.topnav li a.active {background-color: #4CAF50;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px){
+    ul.topnav li.right, 
+    ul.topnav li {float: none;}
+}
 
 </style>
 </head>
 <body>
 
-<div class="w3-bar w3-black">
-<button class="w3-button w3-hover-green">Home</button>
-    <button class="w3-button w3-hover-green">Museus</button>
-    <button class="w3-button w3-hover-green">Monumentos</button>
-    <button class="w3-button w3-hover-green">Restaurantes</button>
-</div>
+    
+<ul class="topnav">
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">Museus</a></li>
+  <li><a href="#contact">Monumentos</a></li>
+  <li><a href="#about">Restaurantes</a></li>
+</ul>
+    
 
 <div class ="w3-row w3-green w3-margin-top w3-text-white">
 <h1>A Cidade de Lisboa</h1>    
@@ -141,26 +171,29 @@ A maioria das sedes das multinacionais instaladas em Portugal encontram-se na re
 
 
 <div class="w3-row w3-small w3-metro-dark-green">
- <div class="w3-container w3-quarter ">
-      <div class="col-sm-2"> <span><div class="circle"></div></span>
+ <div class="w3-container w3-quarter">
+     <div class="col-sm-2"> <span><div class="circle"></div></span>
           <p><b>(C) Docentes de PSI.</b></p>
-    </div>
+   
+    
      
-<div class="w3-container w3-quarter">     
+  
      <p id=tb>  Esta fotografia representa a Torre de Belém.</p>
-    </div>
-<div class="w3-container w3-quarter">   
+    
+  
     <p id=pv>  Esta fotografia representa a Ponte Vasco da Gama.</p>
-    </div>
+    
 
-<div class="w3-container w3-quarter">   
+ 
     <p id=tp>  Esta fotografia representa o Terreiro do Paço</p> 
-    </div>
+     </div>
+   
 
 
     
 </div>
     </div>
+  
 
     
 </body>
