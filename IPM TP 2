@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: dodgerblue;
+   color: black;
+   text-align: center;
+   
+}
+
+body {
+    background-color: skyblue;
+}
+
+    h1{
+        color : black;
+    }
+
+
+
+</style>
+<head>
+<title>Interfaces Pessoa Máquina</title>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="w3-container w3-row w3-blue-grey">
+     <div class="w3-container w3-third">
+        <img id=img1 src="https://i.imgur.com/O2ncEBQ.png" alt="Logotipo" class="w3-image w3-padding-large" style="width:33%"> 
+    </div>
+    
+<div class="w3-container w3-twothird">    
+    <h1><strong>MY TODO LIST</strong></h1>
+    </div>
+
+ 
+</div>
+<div class="w3-sidebar w3-blue w3-bar-block" style="width:20%">
+  <h3 class="w3-bar-item w3-text-black">My Lists</h3>
+  <a href="#" class="w3-bar-item w3-button w3-text-black ">Today's Dinner</a>
+  <a href="#" class="w3-bar-item w3-button w3-text-black">Shopping List</a>
+  <a href="#" class="w3-bar-item w3-button w3-text-black">Homework</a>
+  <a href="#" class="w3-bar-item w3-button w3-text-black">Study materials</a>
+    <a href="#" class="w3-bar-item w3-button">+ Create new list</a>
+</div>
+<div style="margin-left:40% ">
+    <br><br><br><br>
+
+    <input class="w3-check" type="checkbox" checked="checked">
+     <label>Feed the cat</label>
+     <p>
+    <input class="w3-check" type="checkbox"  checked="checked">
+     <label>Make dinner for three</label></p>
+     <p>
+     <input class="w3-check" type="checkbox">
+     <label>Take a shower</label></p>
+    <p>
+    <input class="w3-check" type="checkbox">
+       <label>Turn on spotify</label> </p>
+    
+    <div class="w3-row">
+  <div class="w3-col m2 w3-left " ><br>Add a new task:</div>
+  <div class="w3-col m6  w3-left"><p><input class="w3-input w3-border" name="Add a new task" type="text" placeholder="Do the dishes"></p></div>
+  <div class="w3-col m2 w3-left"><p><button class="w3-button w3-white w3-round-xlarge">Add</button></p></div>
+</div>
+      
+      
+    <p>
+        <button class="w3-button w3-white w3-round-xlarge">Remove marked tasks.</button></p>
+     
+    
+         
+    </div>
+   
+<div class="footer">
+  <h1>Thank you for using our application.</h1>
+    <p><font color="white"><u>Contacts</u> | <u>Donate</u> | <u>Help</u></font></p>
+</div>
+
+
+</body>
+</html>
